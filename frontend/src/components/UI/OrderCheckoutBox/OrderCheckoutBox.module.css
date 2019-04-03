@@ -1,0 +1,28 @@
+.OrderCheckoutBox {    
+  width: 100%;
+  border: 2px solid black;  
+}
+
+.OrderCheckoutTotal {
+  height: 2rem;  
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+.OrderCheckoutTotal > div:first-child {
+  margin-left: 4%;
+}
+
+.OrderCheckoutTotal > div:last-child {
+  margin-right: 4%;
+}
+
+
+
+@media(min-width: 40rem) {
+  .OrderCheckoutBox {
+    margin-top: 2%;
+    width: 40%;
+  }  
+}

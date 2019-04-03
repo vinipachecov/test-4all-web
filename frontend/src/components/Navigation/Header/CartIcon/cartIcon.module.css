@@ -1,0 +1,39 @@
+
+
+.cart {  
+  position: relative;  
+  height: 100%;    
+  width: 3rem;  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart i {
+  font-size: 25px;  
+}
+
+.cartQuantity {  
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+  border-radius: 50%;  
+  position: absolute;  
+  background-color: white;
+  top: 2%;  
+  right: 0%;  
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+@media(min-width: 40rem) {
+  .cartQuantity {
+    min-width: 1.2rem;
+    min-height: 1.2rem;    
+    position: absolute;
+    font-size: 0.7rem;
+    top: 10%;
+  }
+}

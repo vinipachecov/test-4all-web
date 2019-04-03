@@ -1,0 +1,35 @@
+.boxContainer {
+  margin-top: 2rem;
+  border: 2px solid #000;  
+  width: 100%;
+}
+
+.boxContainer .boxItem {
+  border-bottom: 2px solid #000;
+}
+
+.boxContainer:last-child {
+  border-bottom: transparent;
+}
+
+.boxItem {
+  height: 2rem;
+  font-size: 1rem;
+  width: 100%;    
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemName {
+  margin-left: 2%;
+}
+
+@media(min-width: 40rem) {
+  .boxContainer {
+    margin-top: 2rem;
+    border: 2px solid #000;  
+    width: 60%;
+  }
+}
