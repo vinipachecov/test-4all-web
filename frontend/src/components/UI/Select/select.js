@@ -28,6 +28,7 @@ Select.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
   })),
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Select;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import CartIcon from './CartIcon';
 import classes from './header.module.css';
@@ -17,4 +18,17 @@ const Header = ({ quantity, left, cartIcon }) => (
     </div>
   </div>
 );
+
+Header.defaultProps = {
+  quantity: 0,
+  left: '',
+  cartIcon: false,
+};
+
+Header.propTypes = {
+  quantity: PropTypes.number,
+  left: PropTypes.node,
+  cartIcon: PropTypes.bool,
+};
+
 export default Header;

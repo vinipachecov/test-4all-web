@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classes from './StoreCountdown.module.css';
 
 
@@ -13,10 +14,10 @@ class StoreCountdown extends Component {
 
   componentDidMount() {
     const interval = setInterval(() => {
-      const { navigation } = this.props;
+      const { finishOrder } = this.props;
       const { countdown } = this.state;
       if (countdown === 0) {
-        navigation.push('/');
+        finishOrder();
       } else {
         this.setState({ countdown: countdown - 1 });
       }
@@ -49,5 +50,9 @@ class StoreCountdown extends Component {
     );
   }
 }
+
+StoreCountdown.propTypes = {
+  finishOrder: PropTypes.func.isRequired,
+};
 
 export default StoreCountdown;

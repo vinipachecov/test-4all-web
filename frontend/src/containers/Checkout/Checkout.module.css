@@ -31,6 +31,23 @@
 }
 
 
+.modalButton {
+  width: 50%;
+  background-color: white;  
+  border-radius: 5%;
+  border: 2px solid black;
+}
+
+.modalButton:active {
+  background-color: rgba(0, 0, 0, 0.466);
+  transition: 300ms background-color ease-out;
+}
+
+.modalButton:focus {
+  outline: 0;
+}
+
+
 @media(min-width: 40rem) {
   .itemReviewText {
     text-align: center;

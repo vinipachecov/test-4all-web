@@ -30,3 +30,7 @@ export const productsReceived = products => ({
   type: actionTypes.PRODUCTS_RECEIVED,
   products,
 });
+
+export const finishOrder = () => ({
+  type: actionTypes.FINISH_ORDER,
+});

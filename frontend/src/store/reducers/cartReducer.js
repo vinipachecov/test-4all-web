@@ -20,7 +20,7 @@ function onUpdateCartList(state, product, operation) {
         return { ...item, quantity: item.quantity - 1 };
       }
       return item;
-    });
+    }).filter(item => item.quantity > 0);
     return { ...state, cartItems: newCartList };
   }
   return { ...state, cartItems: [...state.cartItems, { ...product, quantity: 1 }] };
@@ -28,6 +28,8 @@ function onUpdateCartList(state, product, operation) {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case actionTypes.FINISH_ORDER:
+      return { ...state, cartItems: [] };
     case actionTypes.ADD_ITEM_TO_CART:
       return onUpdateCartList(state, action.item, '+');
     case actionTypes.REMOVE_ITEM_FROM_CART:
